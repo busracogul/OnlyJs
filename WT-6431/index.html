@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="https://formsubmit.co/cogulbusra@gmail.com" method="POST">
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="surname">Surname:</label></td>
+                    <td><input type="text" name="surname"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">E-mail:</label></td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" name="age" min="15" max="70"></td>
+                </tr>
+                <tr>
+                    <td><label for="message">Message:</label></td>
+                    <td><textarea name="message" rows="4"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="website-rating">How much did you like our site?</label></td>
+                    <td><input type="range" name="website-rating" min="0" max="10"></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Send</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
