@@ -2,11 +2,26 @@
     padding: 0;
     margin: 0;
 }
-table{
+.form-wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    width:fit-content;
+    border: 2px dashed #9967CE;
+    padding: 2rem 4rem;
+    gap: 1rem;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 100dvh;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
 }
 button{
     margin-top: 10px;
@@ -22,13 +37,6 @@ button{
 }
 button:hover{
     transform: scale(1.1);
-}
-td ,tr{
-   padding: 5px;
-}
-tbody{
-    border: 2px dashed #9967CE;
-    padding: 50px;
 }
 label{
     color: #9967CE;
