@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kahve Köşesi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg text-bg-dark">
         <div class="container container-fluid px-0 px-5 px-lg-0">
-            <a class="navbar-brand text-white" href="#">Start Bootstrap</a>
+            <a class="navbar-brand text-white fw-bold" href="./index.html">Kahve Köşesi</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,7 +26,7 @@
                         <a class="nav-link text-secondary" href="./hakkinda.html">Hakkında</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#">İletişim</a>
+                        <a class="nav-link text-secondary" href="./iletisim.html">İletişim</a>
                     </li>
                 </ul>
             </div>
@@ -41,7 +41,7 @@
                     <h4 class="text-secondary text-center text-lg-start my-4">Ekrandan yayılan kahve kokusu, sizi içine çeken büyülü bir serüvene davet ediyor!</h4>
                     <div class="btn-info text-center text-lg-start">
                         <a href="#feature"><button type="button" class="col-12 col-md-4 btn btn-primary btn-lg">Hemen Başla</button></a>
-                        <button type="button" class="col-12 col-md-4 btn btn-outline-light btn-lg mx-lg-3 mt-3 mt-md-0 ms-md-4 ms-0">Daha Fazla</button>
+                        <a href="#blog-scroll"><button type="button" class="col-12 col-md-4 btn btn-outline-light btn-lg mx-lg-3 mt-3 mt-md-0 ms-md-4 ms-0">Daha Fazla</button></a>
                     </div>
                 </div>
                 <div class="d-none d-lg-block col-lg-6">
@@ -56,12 +56,12 @@
             <div class="icon-wrapper row">
                 <div class="col-lg-4 fw-bold fs-2">Geleneksel Lezzetin Doğal Sunumu</div>
                 <div class="col-lg-4 col-md-6 col-12 py-md-4 py-lg-0 my-4 my-md-0">
-                    <i class="bi bi-cup-hot d-inline-block px-3 py-2 bg-primary rounded text-white"></i>
+                    <i class="bi bi-cup-hot d-inline-block fs-5 px-3 py-2 bg-primary rounded text-white"></i>
                     <div class="fw-bold coffee-name my-2">Türk Kahvesi</div>
                     <p>Siz kahve tutkunları için özel olarak seçilmiş en kaliteli kahve çekirdekleri ile hazırlanan Türk kahvemiz, geleneksel lezzeti modern bir sunumla birleştiriyor.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 py-md-4 py-lg-0">
-                    <i class="bi bi-cup-hot d-inline-block px-3 py-2 bg-primary rounded text-white"></i>
+                    <i class="bi bi-cup-hot d-inline-block fs-5 px-3 py-2 bg-primary rounded text-white"></i>
                     <div class="fw-bold coffee-name my-2">Filtre Kahve</div>
                     <p>Filtre kahve, sade ve temiz bir kahve deneyimi arayanlar için mükemmel bir tercihtir. Kahve çekirdekleri, özel tasarımlı bir filtre aracılığıyla demlenir, böylece kahvenin özü yumuşak bir lezzetle ortaya çıkar.</p>
                 </div>
@@ -69,12 +69,12 @@
             <div class="icon-wrapper row my-4">
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <i class="bi bi-cup d-inline-block px-3 py-2 bg-primary rounded text-white"></i>
+                    <i class="bi bi-cup d-inline-block fs-5 px-3 py-2 bg-primary rounded text-white"></i>
                     <div class="fw-bold my-2">Soğuk Kahve</div>
                     <p>Soğuk kahve, sıcak günlerin vazgeçilmezi! İnce bir dokunuşla hazırlanan soğuk kahvemiz, ferahlatıcı bir içecek deneyimi sunar.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 my-4 my-md-0">
-                    <i class="bi bi-cup d-inline-block px-3 py-2 bg-primary rounded text-white"></i>
+                    <i class="bi bi-cup d-inline-block fs-5 px-3 py-2 bg-primary rounded text-white"></i>
                     <div class="fw-bold coffee-name my-2">Hazır Kahve</div>
                     <p>Yoğun tempolu günlerde kahve keyfini yaşamak artık daha kolay! Hazır kahveler, hızlı yaşam tarzınıza uyum sağlayan pratik ve lezzetli bir çözümdür.</p>
                 </div>
@@ -106,7 +106,7 @@
 
     <section>
         <div class="container my-5 px-5 px-lg-0">
-            <div class="blog-wrapper">
+            <div class="blog-wrapper" id="blog-scroll">
                 <div class="blog-text-wrapper">
                     <div class="blog-title fw-bold fs-2 text-center">
                         Kahve Blog
@@ -123,7 +123,7 @@
                             <div class="card-body">
                                 <span class="badge rounded-pill text-bg-primary">Yeni</span>
                                 <h5 class="card-title mt-2">Kahve Nedir?</h5>
-                                <p class="card-text">Kahve; kökboyasıgiller (Rubiaceae) familyasının Coffea cinsinde yer alan bir ağaç ve bu ağacın meyve çekirdeklerine ve bu çekirdeklerden yapılan içeceklere verilen isimdir. Farklı tüketim alışkanlıkları ile birlikte insanların hayatında büyük yer edinmiştir. </p>
+                                <p class="card-text">Kahve; kökboyasıgiller (Rubiaceae) familyasının Coffea cinsinde yer alan bir ağaç ve bu ağacın meyve çekirdeklerine dayalı bir içecektir. Bu eşsiz içki, farklı tüketim alışkanlıkları ile birlikte, sıcak sohbetlerden iş toplantılarına kadar geniş bir yelpazede insan hayatında önemli bir yer edinmiştir</p>
                                 <div class="card-end mt-5">
                                     <div class="card-users-profile d-flex">
                                         <div class="card-profile">
@@ -204,18 +204,18 @@
         </div>
     </section>
 
-    <footer class="bg-black">
+    <footer class="text-bg-dark">
         <div class="container">
             <div class="row text-white py-4">
                 <div class="col-12 col-md-6 text-center text-lg-start">
-                    Copyright © Büşra Çoğul 2024
+                    Copyright &copy; Büşra Çoğul 2024
                 </div>
                 <div class="col-12 col-md-6 text-center text-lg-end">
                     <a href="./index.html" class="text-white">Ana Sayfa</a>
                     <span>.</span>
                     <a href="./hakkinda.html" class="text-white">Hakkında</a>
                     <span>.</span>
-                    <a href="#" class="text-white">İletişim</a>
+                    <a href="./iletisim.html" class="text-white">İletişim</a>
                 </div>
 
             </div>
