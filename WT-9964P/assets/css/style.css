@@ -1,6 +1,12 @@
 .bg-main{
     background: linear-gradient(50deg, rgba(220,75,101,1) 1%, rgba(52,45,111,1) 79%);
 }
+#mainNav{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #fff;
+}
+
 .tnw-logo{
     height: 3rem;
 }
