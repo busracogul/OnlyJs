@@ -1,0 +1,69 @@
+.bg-main{
+    background: linear-gradient(50deg, rgba(220,75,101,1) 1%, rgba(52,45,111,1) 79%);
+}
+.tnw-logo{
+    height: 3rem;
+}
+.play-store-img{
+    height: 40px;
+}
+.phone-screen{
+    height: 450px;
+}
+.bg-phone-screen{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+.icon-close{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: rotate(-10deg) !important;
+    transform: translate(-50%,50%);
+    color: #342d6f;
+    font-size: 2rem !important;
+    width: 2rem;
+}
+.icon-circle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #342d6f;
+}
+.feature-screen{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.icon-feature{
+    font-size: 4rem;
+    color: rgb(220,75,101);
+}
+.bg-download-img{
+    position: relative;
+    padding: 15rem 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1620912189865-1e8a33da4c5e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTg1MDA1Ng&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1500");
+}
+.bg-download-img::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.bg-download-img h1, .bg-download-img p ,.bg-download-img button {
+    position: relative;
+    z-index: 2;  
+}
+.footer-text a:hover{
+    text-decoration: underline !important;
+    color: #fff !important;
+}

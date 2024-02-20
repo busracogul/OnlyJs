@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TarcherP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm p-3">
+        <div class="container container-fluid">
+            <a class="navbar-brand fw-bold" href="#">TarcherP</a>
+            <button class="fs-6 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                Menü<span class="ms-2 navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#features">Özellikler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#download">İndirme</a>
+                    </li>
+                    <button type="button" class="ms-lg-4 mt-2 mt-md-0 w-50 btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="bi bi-chat-text-fill"></i>
+                        Geri Bildirim
+                    </button>
+                    <div class="modal fade mt-5 pt-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-main py-4 text-white">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Geri Bildirim Gönder</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="https://formsubmit.co/cogulbusra@gmail.com" method="POST">
+                                        <div class="mb-3 form-floating">
+                                            <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Enter your name" required>
+                                            <label for="exampleInputEmail1">İsim Soyisim</label>
+                                        </div>
+                                        <div class="mb-3 form-floating">
+                                            <input type="email" name="email" class="form-control" id="exampleInputEmail" placeholder="name@example.com" required>
+                                            <label for="exampleInputEmail1">E-mail adres</label>
+                                        </div>
+                                        <div class="mb-3 form-floating">
+                                            <input type="tel" name="tel" class="form-control" id="examplePhone" placeholder="(123) 456-7890" required>
+                                            <label for="exampleInputEmail1">Telefon Numarası</label>
+                                        </div>
+                                        <div class="mb-3 form-floating">
+                                            <textarea name="mesaj" class="form-control" id="exampleTextarea" placeholder="Mesajınız" rows="5" style="height: 10rem;" required></textarea>
+                                            <label for="exampleTextarea">Mesaj</label>
+                                        </div>
+                                        <button type="submit" class="w-100 btn btn-primary rounded-pill py-3">Gönder</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container my-5 px-5 px-md-0">
+            <div class="row">
+                <div class="col-lg-6 col-12 text-center text-lg-start">
+                    <h2 class="display-1">Süper Güçlü Ok ile Efsanevi Bir Macera</h2>
+                    <p class="text-secondary fs-4">TarcherP ile efsanevi bir maceraya atıl! Kontrol ettiğin güçlü ok, hedeflerini sekerken dünyayı sarsacak. Düşmanları tek başına yok et. Okunun gücüyle ışınlan, hızla gez ve zaferi yakala. Heyecan dolu TarcherP oyunu seni bekliyor!</p>
+                    <div class="d-flex flex-column flex-lg-row my-4 mt-5">
+                        <a href="https://play.google.com/store/apps/details?id=com.SeyfGame.TarcherP&gl=TR"> <img src="./assets/img/google-play-badge.svg" class="play-store-img me-3 mb-4 mb-lg-0" alt=""></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.SeyfGame.TarcherP&gl=TR"><img src="./assets/img/app-store-badge.svg" class="me-3 me-lg-0 mb-4 mb-md-0" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 d-flex justify-content-center">
+                    <div class=" d-flex justify-content-center bg-phone-screen bg-main align-items-center my-5">
+                        <i class="bi bi-x icon-close"></i>
+                        <img src="./assets/img/phone-screen-header.png" class="phone-screen" alt="">
+                        <i class="bi bi-circle-fill icon-circle fs-6"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-main py-4">
+        <div class="container text-white text-center py-5 px-3">
+            <p class="h2 fs-1"> "TarcherP, sıradanlığa meydan okuyan, eğlence dolu bir macerayı tek bir uygulama içinde sunuyor"</p>
+            <div>
+                <img src="./assets/img/tnw-logo.svg" class="tnw-logo mt-2" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-12 order-2 order-lg-1 d-flex justify-content-center align-items-center my-lg-0 py-5 py-lg-0">
+                    <div class="feature-screen bg-main d-flex align-items-center justify-content-center my-5">
+                        <img src="./assets/img/feature-screen.png" class="phone-screen" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-12 order-1 order-lg-2 px-5 px-lg-0 my-5">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-md-6 col-12">
+                            <div class="feature-wrapper text-center">
+
+                                <i class="bi bi-phone icon-feature"></i>
+                                <div class="feature-title fw-bold fs-4">
+                                    Cihaz Maketleri
+                                </div>
+                                <div class="feature-text">
+                                    Oyunu gerçekçi ve şık cihaz tasarımlarıyla oynayın.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 mt-5 mt-md-0">
+                            <div class="feature-wrapper text-center">
+                                <i class="bi bi-camera icon-feature"></i>
+                                <div class="feature-title fw-bold fs-4">
+                                    Esnek Kullanım
+                                </div>
+                                <div class="feature-text">
+                                    Farklı cihazlarda ve ortamlarda sorunsuz bir oyun deneyimi sunar.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-5 d-flex justify-content-center align-items-center">
+                        <div class="col-md-6 col-12">
+                            <div class="feature-wrapper text-center">
+                                <i class="bi bi-gift icon-feature"></i>
+                                <div class="feature-title fw-bold fs-4">
+                                    Ücretsiz Kullanım
+                                </div>
+                                <div class="feature-text">
+                                    Oyunu hemen oynamaya başlamak için mağazadan indirebilirsiniz
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 mt-5 mt-md-0">
+                            <div class="feature-wrapper text-center">
+                                <i class="bi bi-patch-check icon-feature"></i>
+                                <div class="feature-title fw-bold fs-4">
+                                    Açık Kaynak
+                                </div>
+                                <div class="feature-text">
+                                    Oyunumuzun kaynak kodlarına kolaylıkla erişebilirsiniz.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row mx-3 pb-5">
+                <div class="col-lg-6 col-12 my-5">
+                    <h2 class="display-1 mb-3">
+                        Yeni Bir Oyun Çağına Adım Atın!
+                    </h2>
+                    <p class="fs-4 text-secondary">
+                        TarcherP, oyun dünyasına getirdiği yeniliklerle heyecan verici bir dönemi başlatıyor. TarcherP, amacı ve özgünlüğü ile öne çıkarak, oyunculara benzersiz bir oyun deneyimi vaat ediyor. İşte bu yaratıcı maceranın başlangıcı TarcherP ile oyun dünyasında yeni bir çağa ayak basın.
+                    </p>
+                </div>
+                <div class="col-sm-8 col-md-6 d-flex justify-content-center">
+                    <img src="./assets/img/photo-bg.png" class="img-fluid rounded-circle" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="bg-download-img">
+        <div class="container text-white px-5">
+            <div class=" ">
+                <h1 class="display-1">Şimdi deneyin. <br> Maceraya başlayın.</h1>
+                <a href="https://play.google.com/store/apps/details?id=com.SeyfGame.TarcherP&gl=TR"><button type="button" class="btn btn-outline-light rounded-pill px-4 py-3">Hemen İndir</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-main py-4">
+        <div class="container">
+            <div class="row text-center text-white py-5">
+                <h2>Uygulamayı şimdi edinin!</h2>
+                <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center mt-3">
+                    <a href="https://play.google.com/store/apps/details?id=com.SeyfGame.TarcherP&gl=TR"><img src="./assets/img/google-play-badge.svg" class="play-store-img mt-2 me-2 mb-4 mb-lg-0" alt=""></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.SeyfGame.TarcherP&gl=TR"><img src="./assets/img/app-store-badge.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-4">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center text-secondary py-4 ">
+                <div class=" text-center text-lg-start">
+                    &copy; Web sitemiz Büşra Çoğul 2024.
+                </div>
+                <div class="footer-text text-center text-lg-end d-flex align-items-center">
+                    <a href="./index.html" class="text-secondary text-decoration-none">Gizlilik</a>
+                    <span class=" pb-2 mx-2">.</span>
+                    <a href="./hakkinda.html" class="text-secondary text-decoration-none">Şartlar</a>
+                    <span class="mx-2 pb-2">.</span>
+                    <a href="./iletisim.html" class="text-secondary text-decoration-none">SSS</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
