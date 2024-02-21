@@ -32,10 +32,26 @@
     font-size: 2rem !important;
     width: 2rem;
 }
+.icon-close-2{
+    position: absolute;
+    top: -35%;
+    right: -40%;
+    color: #342d6f;
+    font-size: 2rem !important;
+    width: 2rem;
+    transform: rotate(10deg);
+}
 .icon-circle{
     position: absolute;
     top: 0;
     right: 0;
+    color: #342d6f;
+}
+.icon-circle-2{
+    position: absolute;
+   transform: translate(-50%,-50%);
+    bottom:  -25%;
+    left:  15%;
     color: #342d6f;
 }
 .feature-screen{
@@ -43,6 +59,7 @@
     width: 250px;
     height: 250px;
     border-radius: 50%;
+    padding-left:130px;
 }
 .icon-feature{
     font-size: 4rem;
@@ -68,6 +85,9 @@
 .bg-download-img h1, .bg-download-img p ,.bg-download-img button {
     position: relative;
     z-index: 2;  
+}
+.modal-backdrop{
+    z-index: 100;
 }
 .footer-text a:hover{
     text-decoration: underline !important;
