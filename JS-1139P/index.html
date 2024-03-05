@@ -22,10 +22,13 @@
                             0
                         </div>
                         <div class="team-process py-4 d-flex justify-content-center">
-                            <button class="px-3 mx-2" onclick="changeScore()">Skor sayısını değiştir</button>
-                            <button class="px-3" onclick="decraseScore()">-</button>
-                            <button class="px-3 mx-2" onclick="incrementScore()">+</button>
-                            <button class="px-3" onclick="changeName()">İsim Değiştir</button>
+                            <button class="px-3 mx-2" onclick="changeScore('first')">Skor sayısını değiştir</button>
+                            <button class="px-3" onclick="decraseScore('first')">-</button>
+                            <button class="px-3 mx-2" onclick="incrementScore('first')">+</button>
+                            <button class="px-3" onclick="changeName('first')">İsim Değiştir</button>
+                        </div>
+                        <div class="reset-btn-wrapper">
+                            <button id="firstTeamReset" class="reset-btn px-3" onclick="allReset('first')">Sıfırla</button>
                         </div>
                     </div>
 
@@ -39,10 +42,13 @@
                             0
                         </div>
                         <div class="team-process py-4 d-flex justify-content-center">
-                            <button class="px-3 mx-2" onclick="changeScore2()">Skor sayısını değiştir</button>
-                            <button class="px-3" onclick="decraseScore2()">-</button>
-                            <button class="px-3 mx-2" onclick="incrementScore2()">+</button>
-                            <button class="px-3" onclick="changeName2()">İsim Değiştir</button>
+                            <button class="px-3 mx-2" onclick="changeScore('second')">Skor sayısını değiştir</button>
+                            <button class="px-3" onclick="decraseScore('second')">-</button>
+                            <button class="px-3 mx-2" onclick="incrementScore('second')">+</button>
+                            <button class="px-3" onclick="changeName('second')">İsim Değiştir</button>
+                        </div>
+                        <div class="reset-btn-wrapper">
+                            <button id="secondTeamReset" class="reset-btn px-3" onclick="allReset('second')">Sıfırla</button>
                         </div>
                     </div>
                 </div>

@@ -1,65 +1,49 @@
-function changeName() {
-    let teamName = prompt('Takım ismini giriniz : ');
+function changeName(team) {
+    let changeTeamName = prompt('Takım ismini giriniz : ');
 
-    if (teamName !== null && teamName.trim() !== '') {
-        document.getElementById('firstTeamName').innerText = teamName;
+    if (changeTeamName !== null && changeTeamName.trim() !== '') {
+        document.getElementById(`${team}TeamName`).innerText = changeTeamName;
     }
     else {
         alert('Geçerli bir takım ismi girmelisiniz!')
     }
 }
 
-function incrementScore() {
-    let incrementCurrentScore = document.getElementById("firstScore").innerText;
-    document.getElementById("firstScore").innerText = parseInt(incrementCurrentScore) + 1;
+function incrementScore(team) {
+    const scoreId = `${team}Score`;
+    const scoreElement = document.getElementById(scoreId);
+    let score = parseInt(scoreElement.textContent);
+    scoreElement.textContent = ++score;
 }
 
-function decraseScore() {
-    let decraseCurrentScore = document.getElementById("firstScore").innerText;
-    document.getElementById("firstScore").innerText = parseInt(decraseCurrentScore) - 1;
+function decraseScore(team) {
+    const scoreId = `${team}Score`;
+    const scoreElement = document.getElementById(scoreId);
+    let score = parseInt(scoreElement.textContent);
+
+    if (score > 0) {
+        scoreElement.textContent = --score;
+    }
 }
 
-function changeScore() {
+function changeScore(team) {
     let currentScore = prompt('Gol sayısını giriniz : ');
     if (currentScore !== null && currentScore.trim() !== '' && currentScore > 0) {
-        document.getElementById("firstScore").innerText = currentScore;
+        document.getElementById(`${team}Score`).innerText = currentScore;
     }
     else {
-        alert('Lütfen geçerli bir score giriniz: ')
+        alert('Lütfen geçerli bir skor giriniz: ');
     }
 }
 
+function allReset(reset) {
+    const number = 0;
+    document.getElementById(`${reset}Score`).innerText = number;
 
-/*2.takım */
-function changeName2() {
-    let teamName = prompt('Takım ismini giriniz : ');
-
-    if (teamName !== null && teamName.trim() !== '') {
-        document.getElementById('secondTeamName').innerText = teamName;
-    }
-    else {
-        alert('Geçerli bir takım ismi girmelisiniz!')
-    }
+    document.getElementById("firstTeamReset").addEventListener("click", function () {
+        document.getElementById('firstTeamName').innerText = "Takım A";
+    })
+    document.getElementById("secondTeamReset").addEventListener("click", function () {
+        document.getElementById('secondTeamName').innerText = "Takım B";
+    })
 }
-
-function incrementScore2() {
-    let incrementCurrentScore = document.getElementById("secondScore").innerText;
-    document.getElementById("secondScore").innerText = parseInt(incrementCurrentScore) + 1;
-}
-
-function decraseScore2() {
-    let decraseCurrentScore = document.getElementById("secondScore").innerText;
-    document.getElementById("secondScore").innerText = parseInt(decraseCurrentScore) - 1;
-}
-
-function changeScore2() {
-    let currentScore = prompt('Gol sayısını giriniz: ');
-    if (currentScore !== null && currentScore.trim() !== '' && currentScore > 0) {
-        document.getElementById("secondScore").innerText = currentScore;
-    }
-    else {
-        alert('Lütfen geçerli bir score giriniz: ')
-    }
-
-}
-

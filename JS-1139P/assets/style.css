@@ -28,7 +28,7 @@ body::after{
     transform: translate(-50%,50%);
     z-index: 20;
 }
-.team-process button{
+.team-process button, .reset-btn{
     height: 45px;
     background-color: #FFFF2A;
     color: #090F4A;
