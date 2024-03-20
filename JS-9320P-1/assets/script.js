@@ -163,3 +163,46 @@ function renderCharacters() {
 
     renderStatus = !renderStatus;
 }
+
+//filter
+let homeworldsRaw = allCharacters.flatMap(character => character.characters.map(char => char.homeworld ?? 'other'));
+console.log(homeworldsRaw);
+
+const homeworldsUnique = [... new Set(homeworldsRaw)];
+
+let homeworlds = homeworldsUnique.map(lower => lower.toLowerCase());
+
+
+const radioWrapper = document.createElement("div");
+radioWrapper.classList.add('d-flex', 'justify-content-center', 'align-items-center')
+document.body.appendChild(radioWrapper);
+
+
+
+for (let i = 0; i < homeworlds.length; i++) {
+    const radioButton = `
+    
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" name="myRadios" id="homeworld-${homeworlds[i]}" value="${homeworlds[i]}">
+        <label class="form-check-label" for="homeworld-${homeworlds[i]}">${homeworlds[i]}</label>
+    </div>`
+
+    radioWrapper.innerHTML += radioButton;
+}
+
+
+const filteredHomeworld = document.getElementsByName("myRadios");
+let prev = null;
+
+for (let i = 0; i < filteredHomeworld.length; i++) {
+    filteredHomeworld[i].addEventListener('change', function () {
+        if (this.checked && prev && this !== prev) {
+            prev.checked = false;
+
+        }
+        prev = this.checked ? this : null;
+
+    });
+}
+
+
