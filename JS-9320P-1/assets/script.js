@@ -180,7 +180,7 @@ function renderCharacters() {
             const card = `
                     <div class="card card-wrapper mx-auto my-4" style="width: 18rem;">
                         <img src="${character.pic
-                }" class="card-img-top img-wrapper" alt="...">
+                }" class="card-img-top img-wrapper mt-3" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">${character.name}</h5>
                             <p class="card-text">${character.homeworld || "Bilinmiyor"
@@ -215,7 +215,7 @@ function filterCharacters(selectedHomeworld) {
             const card = `
                       <div class="card card-wrapper mx-auto my-4" style="width: 18rem;">
                           <img src="${character.pic
-                }" class="card-img-top img-wrapper" alt="...">
+                }" class="card-img-top img-wrapper mt-3" alt="...">
                           <div class="card-body">
                               <h5 class="card-title
                               ">${character.name}</h5>
@@ -233,7 +233,7 @@ function filterCharacters(selectedHomeworld) {
         const card = `
                       <div class="card card-wrapper mx-auto my-4" style="width: 18rem;">
                           <img src="${character.pic
-            }" class="card-img-top img-wrapper" alt="...">
+            }" class="card-img-top mt-3 img-wrapper" alt="...">
                           <div class="card-body">
                               <h5 class="card-title
                               ">${character.name}</h5>

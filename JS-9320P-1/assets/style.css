@@ -2,6 +2,12 @@
     width: 15rem;
     height: 20rem;
 }
+body{
+    background-color:#f3F7F8 !important ;
+}
+.card-wrapper{
+    background-color:#Dfe6ec !important ;
+}
 .card-wrapper:hover{
 transform: scale(1.1);
 transition:  .9s ease;
