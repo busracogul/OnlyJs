@@ -1,0 +1,6 @@
+.card-body {
+    box-shadow: rgba(12, 167, 214, 0.884) 0px 4px 12px ;
+}
+.card-user .card-title, .card-user .card-text {
+    height: 45px; 
+}
