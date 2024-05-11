@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import { nanoid } from 'nanoid';
 import './App.css';
+import IconButton from './components/IconButton';
 
 const shops = [
   { "id": 1, "name": "Migros" },
@@ -47,7 +48,7 @@ const App = () => {
         return { ...product, isBought: !product.isBought };
       }
       return product;
-    }));
+    }));    
   };
 
   return (
@@ -68,7 +69,6 @@ const App = () => {
         ))}
       </Form.Select>
       <Button variant="outline-secondary" onClick={handleAddProduct}>Ekle</Button>{' '}
-
       <Table striped bordered hover size="lg">
         <thead>
           <tr>
@@ -76,15 +76,26 @@ const App = () => {
             <th>Ürün Adı</th>
             <th>Market</th>
             <th>Kategori</th>
+            <th>Sil</th>
           </tr>
         </thead>
         <tbody>
           {products.map(product => (
-            <tr key={product.id} className={product.isBought ? 'strike-through' : ''} onClick={() => handleToggleBought(product.id)}>
+            <tr key={product.id} className={product.isBought ? 'strike-through' : ''} onClick={() =>{
+              if (products.every((uP) => Boolean(uP.isBought))) {
+                alert("Alışverişi tamamladınız");
+              }
+              handleToggleBought(product.id)}
+            } >
               <td>{product.id}</td>
               <td>{product.name}</td>
-              <td>{product.shop}</td>
-              <td>{product.category}</td>
+              <td>{shops.find(shop => shop.id === parseInt(product.shop)).name}</td>
+              <td>{categories.find(category => category.id == (product.category)).name}</td>
+              <td><IconButton
+                handleClick={() => {
+                  setProducts(products.filter(filterProduct => filterProduct.id !== product.id));
+                }}
+              /></td>
             </tr>
           ))}
         </tbody>
