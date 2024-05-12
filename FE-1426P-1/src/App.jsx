@@ -88,106 +88,128 @@ const App = () => {
   console.log(filteredStatus)
   return (
     <>
-      <Form>
-        <Form.Group className="mb-3" controlId="productName">
-          <Form.Control type="text" placeholder="Ürün Adı" value={productName} onChange={(e) => { setProductName(e.target.value) }} />
-        </Form.Group>
-        <Form.Select aria-label="Market seçiniz" value={selectedShop} onChange={(e) => { setSelectedShop(e.target.value) }}>
-          <option>Market seçiniz</option>
-          {shops.map(shop => (
-            <option key={shop.id} value={shop.id}>{shop.name}</option>
-          ))}
-        </Form.Select>
-        <Form.Select aria-label="Kategori seçiniz" value={selectedCategory} onChange={(e) => { setSelectedCategory(e.target.value) }}>
-          <option>Kategori seçiniz</option>
-          {categories.map(category => (
-            <option key={category.id} value={category.id}>{category.name}</option>
-          ))}
-        </Form.Select>
-      </Form>
-      <Button variant="outline-secondary" onClick={handleAddProduct}>Ekle</Button>{' '}
+      <div className='p-5 m-5'>
+        <Form className='row'>
+          <div className="col-3">
+            <Form.Group controlId="productName">
+              <Form.Control type="text" placeholder="Ürün Adı" value={productName} onChange={(e) => { setProductName(e.target.value) }} />
+            </Form.Group>
+          </div>
+          <div className="col-3">
+            <Form.Select aria-label="Market seçiniz" value={selectedShop} onChange={(e) => { setSelectedShop(e.target.value) }}>
+              <option>Market seçiniz</option>
+              {shops.map(shop => (
+                <option key={shop.id} value={shop.id}>{shop.name}</option>
+              ))}
+            </Form.Select>
+          </div>
+          <div className="col-3">
+            <Form.Select aria-label="Kategori seçiniz" value={selectedCategory} onChange={(e) => { setSelectedCategory(e.target.value) }}>
+              <option>Kategori seçiniz</option>
+              {categories.map(category => (
+                <option key={category.id} value={category.id}>{category.name}</option>
+              ))}
+            </Form.Select>
+          </div>
+          <div className="col-3">
+            <Button variant="outline-light" onClick={handleAddProduct}>Ekle</Button>{' '}
+          </div>
+        </Form>
 
-      <Form>
-        <Form.Group className="mb-3" controlId="productName">
-          <Form.Control type="text" placeholder="Filter name" value={filteredName} onChange={(e) => {
-            setFilteredName(e.target.value)
-          }} />
-        </Form.Group>
-        <Form.Group onChange={(e) => {
-          const val = e.target.value;
-          setFilteredStatus(val === "reset" ? val : val === "true" ? true : false);
-        }} className='d-flex flex-column'>
-          <Form.Check
-            inline
-            value={"reset"}
-            label="Sıfırla"
-            name="group1"
-            type={"radio"}
-            id={`inline-radio-1`}
-          />
-          <Form.Check
-            inline
-            value={true}
-            label="Alınmış"
-            name="group1"
-            type={"radio"}
-            id={`inline-radio-2`}
-          />
-          <Form.Check
-            inline
-            value={false}
-            label="Alınmamış"
-            name="group1"
-            type={"radio"}
-            id={`inline-radio-3`}
-          />
-        </Form.Group>
-        <Form.Select aria-label="Market seçiniz" value={filteredShopId} onChange={(e) => { setFilteredShopId(e.target.value) }}>
-          <option value={""} >Marketi Filtrele</option>
-          {shops.map(shop => (
-            <option key={shop.id} value={shop.id}>{shop.name}</option>
-          ))}
-        </Form.Select>
-        <Form.Select aria-label="Kategori seçiniz" value={filteredCategoryId} onChange={(e) => { setFilteredCategoryId(e.target.value) }}>
-          <option value={""}>Kategori Filtrele</option>
-          {categories.map(category => (
-            <option key={category.id} value={category.id}>{category.name}</option>
-          ))}
-        </Form.Select>
-      </Form>
+        <Form className='d-flex row mt-5'>
+          <div className="col-3">
+            <Form.Group controlId="productName">
+              <Form.Control type="text" placeholder="Filter name" value={filteredName} onChange={(e) => { setFilteredName(e.target.value) }} />
+            </Form.Group>
+          </div>
+          <div className="col-3">
+            <Form.Select aria-label="Market seçiniz" className='' value={filteredShopId} onChange={(e) => { setFilteredShopId(e.target.value) }}>
+              <option value={""}>Marketi Filtrele</option>
+              {shops.map(shop => (
+                <option key={shop.id} value={shop.id}>{shop.name}</option>
+              ))}
+            </Form.Select>
+          </div>
+          <div className="col-3">
+            <Form.Select aria-label="Kategori seçiniz" className='col-height' value={filteredCategoryId} onChange={(e) => { setFilteredCategoryId(e.target.value) }}>
+              <option value={""}>Kategori Filtrele</option>
+              {categories.map(category => (
+                <option key={category.id} value={category.id}>{category.name}</option>
+              ))}
+            </Form.Select>
+          </div>
+          <div className="col-3">
+            <Form.Group onChange={(e) => {
+              const val = e.target.value;
+              setFilteredStatus(val === "reset" ? val : val === "true" ? true : false);
+            }} className='ms-4 text-white'>
+              <div className="col-1">
+                <Form.Check
+                  inline
+                  value={"reset"}
+                  label="Sıfırla"
+                  name="group1"
+                  type={"radio"}
+                  id={`inline-radio-1`}
+                />
+              </div>
+              <div className="col-1">
+                <Form.Check
+                  inline
+                  value={true}
+                  label="Alınmış"
+                  name="group1"
+                  type={"radio"}
+                  id={`inline-radio-2`}
+                />
+              </div>
+              <div className="col-1">
+                <Form.Check
+                  inline
+                  value={false}
+                  label="Alınmamış"
+                  name="group1"
+                  type={"radio"}
+                  id={`inline-radio-3`}
+                />
+              </div>
+            </Form.Group>
+          </div>
+        </Form>
 
-      <Table striped bordered hover size="lg">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Ürün Adı</th>
-            <th>Market</th>
-            <th>Kategori</th>
-            <th>Sil</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredProducts.map(product => (
-            <tr key={product.id} className={product.isBought ? 'strike-through' : ''} onClick={() => {
-              if (products.every((uP) => Boolean(uP.isBought))) {
-                alert("Alışverişi tamamladınız");
-              }
-              handleToggleBought(product.id)
-            }
-            } >
-              <td>{product.id}</td>
-              <td>{product.name}</td>
-              <td>{shops.find(shop => shop.id === parseInt(product.shop)).name}</td>
-              <td>{categories.find(category => category.id == (product.category)).name}</td>
-              <td><IconButton
-                handleClick={() => {
-                  setProducts(products.filter(filterProduct => filterProduct.id !== product.id));
-                }}
-              /></td>
+        <Table striped bordered hover size="sm" className='w-75 mt-5'>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Ürün Adı</th>
+              <th>Market</th>
+              <th>Kategori</th>
+              <th>Sil</th>
             </tr>
-          ))}
-        </tbody>
-      </Table>
+          </thead>
+          <tbody>
+            {filteredProducts.map(product => (
+              <tr key={product.id} className={product.isBought ? 'strike-through' : ''} onClick={() => {
+                if (products.every((uP) => Boolean(uP.isBought))) {
+                  alert("Alışverişi tamamladınız");
+                }
+                handleToggleBought(product.id)
+              }
+              } >
+                <td>{product.id}</td>
+                <td>{product.name}</td>
+                <td>{shops.find(shop => shop.id === parseInt(product.shop)).name}</td>
+                <td>{categories.find(category => category.id == (product.category)).name}</td>
+                <td><IconButton
+                  handleClick={() => {
+                    setProducts(products.filter(filterProduct => filterProduct.id !== product.id));
+                  }}
+                /></td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </div>
     </>
   );
 }

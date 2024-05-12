@@ -1,4 +1,7 @@
 .strike-through {
     text-decoration: line-through;
   }
-  
+  body{
+    background: rgb(162,182,199);
+    background: radial-gradient(circle, rgba(162,182,199,1) 0%, rgba(226,221,215,1) 100%);
+  }
