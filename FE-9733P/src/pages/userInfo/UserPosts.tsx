@@ -1,5 +1,5 @@
 import React from "react";
-import { LoaderFunctionArgs, useLoaderData } from "react-router-dom";
+import { Link, LoaderFunctionArgs, useLoaderData } from "react-router-dom";
 
 interface PostParams {
   id: number;
@@ -8,7 +8,7 @@ interface PostParams {
   body: string;
 }
 
-export const userPostsLoader = async ({ params }:LoaderFunctionArgs) => {
+export const userPostsLoader = async ({ params }: LoaderFunctionArgs) => {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/users/${params.userId}/posts`
   );
@@ -17,18 +17,22 @@ export const userPostsLoader = async ({ params }:LoaderFunctionArgs) => {
 };
 
 function UserPosts() {
-  const posts = useLoaderData() as PostParams[]
+  const posts = useLoaderData() as PostParams[];
 
   return (
     <>
-    <h2>Posts</h2>
-    <ul>
-        {posts.map(post =>(
-            <li key={post.id}>{post.body}</li>
+      <h2>Posts</h2>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>
+            <Link to={`/users/${post.userId}/posts/${post.id}`}>
+              {post.body}
+            </Link>
+          </li>
         ))}
-    </ul>
+      </ul>
     </>
-  )
+  );
 }
 
 export default UserPosts;
